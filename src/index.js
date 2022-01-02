@@ -1,12 +1,7 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
-
+import React from "react";
+import ReactDom from "react-dom";
 import App from "./App";
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  rootElement
-);
+// JSXは一つのAppに一つのタグしか作ることができないので、<>もしくは<React.Fragmentで囲うこと。>
+
+ReactDom.render(<App />, document.querySelector("#root"));
